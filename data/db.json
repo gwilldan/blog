@@ -1,0 +1,28 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "title": "first",
+      "datetime": "September, 21, 2023, 9:46:25 PM",
+      "body": "1st MOTHERFUCKER!"
+    },
+    {
+      "id": 2,
+      "title": "second",
+      "datetime": "September 21, 2023 8:44:30 PM",
+      "body": "this is the second"
+    },
+    {
+      "id": 3,
+      "title": "third",
+      "datetime": "September 21, 2023 8:44:50 PM",
+      "body": "this is the fucking third"
+    },
+    {
+      "id": 4,
+      "title": "THE FOURTH",
+      "datetime": "September, 21, 2023, 9:48:22 PM",
+      "body": "THIS IS BASICALLY THE FOURTH POST 😁"
+    }
+  ]
+}
