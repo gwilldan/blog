@@ -22,6 +22,8 @@ const Content = ({
 	setEditTitle,
 	editBody,
 	setEditBody,
+	fetchError,
+	isLoading,
 }) => {
 	const Navigate = useNavigate();
 	const [editId, setEditId] = useState();
@@ -76,7 +78,6 @@ const Content = ({
 
 	const handleEdit = async (e) => {
 		e.preventDefault();
-		console.log(editId);
 		const date = format(new Date(), "MMMM, dd, yyyy, pp");
 		const editedPost = {
 			id: editId,
@@ -101,6 +102,8 @@ const Content = ({
 					<Home
 						posts={posts}
 						errors={errors}
+						fetchError={fetchError}
+						isLoading={isLoading}
 					/>
 				}
 			/>

@@ -1,16 +1,23 @@
 import React, { useState, CSSProperties } from "react";
+import post from "../api/post";
 import { Feed } from "../components";
 
-function Home({ posts, errors }) {
+function Home({ posts, errors, isLoading, fetchError }) {
 	return (
 		<main className=" h-full overflow-auto no-scrollbar">
-			{posts.length ? (
-				<Feed posts={posts} />
-			) : (
-				<p className=" text-2xl font-semibold m-3 text-red-500">
-					{errors ? errors : "No Post to display"}
-				</p>
+			{isLoading && (
+				<p className="text-semibold text-xl m-3">Loading post...</p>
 			)}
+			{!isLoading && fetchError && (
+				<p className="text-semibold text-xl text-red-500 m-3">{fetchError}</p>
+			)}
+			{!isLoading &&
+				!fetchError &&
+				(posts.length ? (
+					<Feed posts={posts} />
+				) : (
+					<p className="text-semibold text-xl m-3">No Posts to display!</p>
+				))}
 		</main>
 	);
 }
